@@ -10,5 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install python dependencies
+        run: pip install --user -r requirements.txt
+
       - name: Check python types
         run: yarn pyright
