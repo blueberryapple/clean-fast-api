@@ -20,7 +20,7 @@ class FlowerClassifier:
         Class method to obtain singleton flower classifier
         """
         if cls.iris_classifier is None:
-            with open('flower/model.pkl', 'rb') as iris_model:
+            with open('modules/flower/model.pkl', 'rb') as iris_model:
                 cls.iris_classifier = pickle.load(iris_model)
 
         return cls.iris_classifier
