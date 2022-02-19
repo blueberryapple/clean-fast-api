@@ -1,4 +1,7 @@
 {
   "python.linting.pylintEnabled": true,
-  "python.linting.enabled": true
+  "python.linting.enabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "terminal.integrated.persistentSessionReviveProcess": "never"
 }
