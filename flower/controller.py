@@ -25,6 +25,6 @@ class PredictionRequest(BaseModel):
 
 
 @router.post("/predict", response_model=str)
-async def root(request: PredictionRequest, services: Services = Depends(get_services)):
+async def predict_flower(request: PredictionRequest, services: Services = Depends(get_services)):
     flower_service = services.get('flower_service')
     return flower_service.get_flower_prediction(request)
