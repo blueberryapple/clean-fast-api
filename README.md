@@ -4,7 +4,7 @@
 
 # clean-fast-api
 
-This microservice follows clean architecture. It mainly serves as an example for serving ml models.The code has separate concerns for the routing, business logic, and data retrieval.
+This microservice follows clean architecture. It mainly serves as an example for serving ml models. The code has separate concerns for the routing, business logic, and data retrieval.
 
 ## Technical details
 
@@ -32,4 +32,4 @@ If you don't use `pyenv`, make sure you match our Python version `3.10.2`.
 
 ## Viewing the schema
 
-The microservice is documented using OpenAPI 3. You can view the documentation at `http:localhost:8000/docs` or use the `openapi.json` file.
+The microservice is documented using OpenAPI 3. You can view the documentation at `http://localhost:8000/docs` or use the `openapi.json` file.
