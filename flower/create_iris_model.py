@@ -2,7 +2,6 @@
 Creates the flower random forrest classifier
 """
 import pickle
-
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
