@@ -29,3 +29,7 @@ uvicorn main:app
 ```
 
 If you don't use `pyenv`, make sure you match our Python version `3.10.2`.
+
+## Viewing the schema
+
+The microservice is documented using OpenAPI 3. You can view the documentation at `http:localhost:8000/docs` or use the `openapi.json` file.
