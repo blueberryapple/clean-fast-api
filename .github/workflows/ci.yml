@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  Check-Python-Types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check python types
+        run: yarn pyright
