@@ -1,12 +1,23 @@
-from fastapi import APIRouter
+from typing import TypedDict
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel
-from .service import Flower_Service
-from .repository import Flower_Repository
+from .service import FlowerService
+from .repository import FlowerRepository
 
-router = APIRouter(prefix="/flower")
+router = APIRouter(prefix="/flower", tags=['flower'])
 
 
-class Prediction_Request(BaseModel):
+class Services(TypedDict):
+    flower_service: FlowerService
+
+
+def get_services(flowerRepository: FlowerRepository = Depends()) -> Services:
+    return {
+        'flower_service': FlowerService(flowerRepository)
+    }
+
+
+class PredictionRequest(BaseModel):
     sepal_length: float
     sepal_width: float
     petal_length: float
@@ -14,7 +25,6 @@ class Prediction_Request(BaseModel):
 
 
 @router.post("/predict", response_model=str)
-async def root(request: Prediction_Request):
-    flower_repository = Flower_Repository()
-    prediction_service = Flower_Service(flower_repository)
-    return prediction_service.get_flower_prediction(request)
+async def root(request: PredictionRequest, services: Services = Depends(get_services)):
+    flower_service = services.get('flower_service')
+    return flower_service.get_flower_prediction(request)

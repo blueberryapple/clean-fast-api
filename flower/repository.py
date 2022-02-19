@@ -2,7 +2,7 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 
 
-class Flower_Repository:
+class FlowerRepository:
     iris_classifier: RandomForestClassifier
 
     def __init__(self) -> None:

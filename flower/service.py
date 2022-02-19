@@ -1,7 +1,7 @@
-from .repository import Flower_Repository
+from .repository import FlowerRepository
 
 
-class Flower_Attributes:
+class FlowerAttributes:
     sepal_length: float
     sepal_width: float
     petal_length: float
@@ -11,13 +11,13 @@ class Flower_Attributes:
 flowers: list[str] = ['iris-setosa', 'iris-versicolor', 'iris-virginia']
 
 
-class Flower_Service:
-    flower_repository: Flower_Repository
+class FlowerService:
+    flower_repository: FlowerRepository
 
     def __init__(self, flower_repository) -> None:
         self.flower_repository = flower_repository
 
-    def get_flower_prediction(self, flower_attributes: Flower_Attributes) -> str:
+    def get_flower_prediction(self, flower_attributes: FlowerAttributes) -> str:
         flower_values = [flower_attributes.sepal_length, flower_attributes.sepal_width,
                          flower_attributes.petal_length, flower_attributes.petal_width]
 
