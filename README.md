@@ -25,7 +25,7 @@ pyenv activate clean_fast_api
 
 # install dependencies and run server
 pip3 install -r requirements.txt
-uvicorn modules.app.main:app
+make server
 ```
 
 If you don't use `pyenv`, make sure you match our Python version `3.10.2`.
