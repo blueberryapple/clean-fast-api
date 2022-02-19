@@ -26,5 +26,11 @@ class PredictionRequest(BaseModel):
 
 @router.post("/predict", response_model=str)
 async def predict_flower(request: PredictionRequest, services: Services = Depends(get_services)):
-    flower_service = services.get('flower_service')
-    return flower_service.get_flower_prediction(request)
+    flower_service = services['flower_service']
+
+    return flower_service.get_flower_prediction({
+        'petal_length': request.petal_length,
+        'petal_width': request.petal_width,
+        'sepal_length': request.sepal_length,
+        'sepal_width': request.sepal_width
+    })

@@ -10,4 +10,10 @@ class FlowerRepository:
             self.iris_classifier = pickle.load(iris_model)
 
     def get_flower_prediction(self, flower_attributes: list[float]) -> list[int]:
-        return self.iris_classifier.predict([flower_attributes])
+        predicted_flower = self.iris_classifier.predict(
+            [flower_attributes]).tolist()
+
+        if not isinstance(predicted_flower, list):
+            raise Exception('Error generating flower prediction')
+
+        return predicted_flower
