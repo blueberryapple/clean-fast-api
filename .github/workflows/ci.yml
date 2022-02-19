@@ -20,3 +20,6 @@ jobs:
 
       - name: Check python types
         run: yarn pyright
+
+      - name: Lint files
+        run: pylint **/*.py

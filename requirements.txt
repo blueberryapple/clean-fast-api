@@ -1,15 +1,21 @@
 anyio==3.5.0
 asgiref==3.5.0
+astroid==2.9.3
 autopep8==1.6.0
 click==8.0.4
 fastapi==0.74.0
 h11==0.13.0
 httptools==0.3.0
 idna==3.3
+isort==5.10.1
 joblib==1.1.0
+lazy-object-proxy==1.7.1
+mccabe==0.6.1
 numpy==1.22.2
+platformdirs==2.5.1
 pycodestyle==2.8.0
 pydantic==1.9.0
+pylint==2.12.2
 python-dotenv==0.19.2
 PyYAML==6.0
 scikit-learn==1.0.2
@@ -23,3 +29,4 @@ uvicorn==0.17.5
 uvloop==0.16.0
 watchgod==0.7
 websockets==10.1
+wrapt==1.13.3
