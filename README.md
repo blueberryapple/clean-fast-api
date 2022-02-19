@@ -4,7 +4,7 @@
 
 # clean-fast-api
 
-This microservice follow clean architecture. It mainly serves as an example for serving ml models.The code has separate concerns for the routing, business logic, and data retrieval.
+This microservice follows clean architecture. It mainly serves as an example for serving ml models.The code has separate concerns for the routing, business logic, and data retrieval.
 
 ## Technical details
 
