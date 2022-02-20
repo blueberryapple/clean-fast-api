@@ -28,7 +28,7 @@ def get_services(flower_repository: FlowerRepository = Depends()) -> Services:
 
 class PredictionRequest(BaseModel):
     """
-    Defines the request paylod schema for flower prediction
+    Defines the request payload schema for flower prediction
     """
     sepal_length: float
     sepal_width: float
