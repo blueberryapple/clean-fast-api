@@ -15,10 +15,10 @@ jobs:
           python-version: '3.10.2'
           cache: 'pip'
 
-      - name: Install python dependencies
+      - name: Install dependencies
         run: pip3 install -r requirements.txt
 
-      - name: Check python types
+      - name: Check types
         run: yarn pyright
 
       - name: Lint files
