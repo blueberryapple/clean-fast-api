@@ -36,14 +36,22 @@ class FlowerRepository:
     def __init__(self) -> None:
         self.iris_classifier = FlowerClassifier.get_instance()
 
-    def get_flower_prediction(self, flower_attributes: list[float]) -> list[int]:
+    def get_flower_predictions(self, flower_attributes: list[list[float]]) -> list[int]:
+        """
+        Uses the random forrest classifier to generate predictions on flowers
+        """
+        predicted_flowers = self.iris_classifier.predict(
+            flower_attributes).tolist()
+
+        if not isinstance(predicted_flowers, list):
+            raise Exception('Error generating flower prediction')
+
+        return predicted_flowers
+
+    def get_flower_prediction(self, flower_attributes: list[float]) -> int:
         """
         Uses the random forrest classifier to generate a prediction on flower
         """
-        predicted_flower = self.iris_classifier.predict(
-            [flower_attributes]).tolist()
-
-        if not isinstance(predicted_flower, list):
-            raise Exception('Error generating flower prediction')
+        predicted_flower, *_ = self.get_flower_predictions([flower_attributes])
 
         return predicted_flower

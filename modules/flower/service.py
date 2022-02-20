@@ -34,7 +34,7 @@ class FlowerService:
         flower_values = [flower_attributes['sepal_length'], flower_attributes['sepal_width'],
                          flower_attributes['petal_length'], flower_attributes['petal_width']]
 
-        flower_prediction, *_ = self.flower_repository.get_flower_prediction(
+        flower_prediction = self.flower_repository.get_flower_prediction(
             flower_values)
 
         return flowers[flower_prediction]
