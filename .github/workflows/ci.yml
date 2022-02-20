@@ -2,7 +2,9 @@ name: CI
 on:
   push:
     branches:
-      - "main"
+      - 'main'
+    paths:
+      - '**.py'
 
 jobs:
   Check-Python-Code:
@@ -22,4 +24,4 @@ jobs:
         run: yarn pyright
 
       - name: Lint files
-        run: pylint **/*.py
+        run: 'pylint modules/**/*.py'
