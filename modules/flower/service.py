@@ -15,7 +15,7 @@ class FlowerAttributes(TypedDict):
     petal_width: float
 
 
-flowers: list[str] = ['iris-setosa', 'iris-versicolor', 'iris-virginia']
+flowers: list[str] = ['iris-setosa', 'iris-versicolour', 'iris-virginica']
 
 
 class FlowerService:

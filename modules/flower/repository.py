@@ -2,6 +2,7 @@
 Repository layer for flower service
 """
 import pickle
+from typing import Optional
 from sklearn.ensemble import RandomForestClassifier
 
 
@@ -9,7 +10,7 @@ class FlowerClassifier:
     """
     Flower classifier singleton
     """
-    iris_classifier = None
+    iris_classifier: Optional[RandomForestClassifier] = None
 
     def __init__(self):
         raise Exception('Please use get_instance() method')

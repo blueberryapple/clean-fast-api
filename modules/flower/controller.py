@@ -39,7 +39,7 @@ class PredictionRequest(BaseModel):
 @router.post("/predict", response_model=str)
 async def predict_flower(request: PredictionRequest, services: Services = Depends(get_services)):
     """
-    Predicts flower given petal and speal measurements using a random forrest classifier
+    Predicts flower given petal and sepal measurements using a random forrest classifier
     """
     flower_service = services['flower_service']
 
