@@ -11,11 +11,13 @@ isort==5.10.1
 joblib==1.1.0
 lazy-object-proxy==1.7.1
 mccabe==0.6.1
+nodeenv==1.7.0
 numpy==1.22.2
 platformdirs==2.5.1
 pycodestyle==2.8.0
 pydantic==1.9.0
 pylint==2.12.2
+pyright==1.1.281
 python-dotenv==0.19.2
 PyYAML==6.0
 scikit-learn==1.0.2

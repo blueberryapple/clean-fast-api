@@ -12,7 +12,7 @@ It uses fastapi and `uvicorn` to create the http server and inject dependencies 
 
 ## CI/CD
 
-It uses GitHub actions to statically typecheck the codebase using [`pyright`](https://github.com/Microsoft/pyright). We bundle `pyright` in our repository through Yarn PnP in addition to caching Python dependencies to speed up the run time.
+It uses GitHub actions to statically typecheck the codebase using [`pyright`](https://github.com/Microsoft/pyright).
 
 ## Running the server
 
@@ -32,4 +32,8 @@ If you don't use `pyenv`, make sure you match our Python version `3.10.2`.
 
 ## Viewing the schema
 
-The microservice is documented using OpenAPI 3. You can view the documentation at `http://localhost:8000/docs` or use the `openapi.json` file.
+The microservice is documented using OpenAPI 3. You can view the documentation at:
+
+- http://localhost:8000/docs
+- http://localhost:8000/redoc
+- the `openapi.json` file.
