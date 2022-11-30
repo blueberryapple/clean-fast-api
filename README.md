@@ -20,7 +20,7 @@ We use `pyenv` for managing our Python versions:
 
 ```sh
 # set up virtual env
-pyenv virtualenv 3.10.2 clean_fast_api
+pyenv virtualenv 3.10 clean_fast_api
 pyenv activate clean_fast_api
 
 # install dependencies and run server
